@@ -7,3 +7,5 @@ edition = "2024"
 axum = "0.8"
 tower-http = { version = "0", features = [ "fs" ] }
 tokio = { version = "1", features = [ "full" ] }
+base64 = "*"
+fastrand = "*"
