@@ -1,4 +1,4 @@
-use axum::Router;
+use axum::{response::Html, Router};
 use tokio::net::TcpListener;
 
 #[tokio::main]
@@ -17,8 +17,8 @@ async fn main() {
 	axum::serve(listener, app).await.unwrap();
 }
 
-fn template(title: &str, text: &str) -> String {
-	include_str!("../main_page.html")
+fn template(title: &str, text: &str) -> Html<String> {
+	Html(include_str!("../main_page.html")
 		.replace("[[TEXT]]", text)
-		.replace("[[TITLE]]", title)
+		.replace("[[TITLE]]", title))
 }
