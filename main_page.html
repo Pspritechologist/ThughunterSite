@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>[[TITLE]]</title>
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			overflow: hidden;
+			font-family: sans-serif;
+		}
+
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: linear-gradient(270deg, #ff7eb9, #ff65a3, #7afcff, #feff9c, #fff740);
+			background-size: 1000% 1000%;
+			animation: gradientShift 10s ease infinite;
+		}
+
+		@keyframes gradientShift {
+			0% {background-position: 0% 50%;}
+			50% {background-position: 100% 50%;}
+			100% {background-position: 0% 50%;}
+		}
+
+		h1 {
+			font-size: 5rem;
+			color: white;
+			text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+		}
+	</style>
+</head>
+<body>
+	<h1>[[TEXT]]</h1>
+</body>
+</html>
